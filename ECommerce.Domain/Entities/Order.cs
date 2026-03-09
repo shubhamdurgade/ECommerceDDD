@@ -27,7 +27,7 @@ namespace ECommerce.Domain.Entities
 
         public Customer Customer { get; private set; } = null!;
 
-        public ICollection<OrderItem> OrderItems { get; private set; } = new List<OrderItem>();
+        public ICollection<OrderItem> Items { get; private set; } = new List<OrderItem>();
         
         private Order() { }
 
@@ -54,7 +54,7 @@ namespace ECommerce.Domain.Entities
             }
             else
             {
-                 Items.Add(new OrderItem(product.Id, quantity, product.Price));
+                 Items.Add(new OrderItem(this,product.Id, product.Name, quantity, product.Price));
             }
 
             product.ReduceStock(quantity);
@@ -63,7 +63,7 @@ namespace ECommerce.Domain.Entities
 
         private void CalculateTotalAmount()
         {
-            TotalAmount = OrderItems.Sum(i => i.Quantity * i.UnitPrice);
+            TotalAmount = Items.Sum(i => i.Quantity * i.UnitPrice);
         }
     }
 }
