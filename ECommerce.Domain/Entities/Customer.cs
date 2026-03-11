@@ -9,7 +9,7 @@ namespace ECommerce.Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; private set; }
+        public int Id { get; private set; }
 
         [Required,MaxLength(100)]
         public string FirstName { get; private set; } = null!;

@@ -13,7 +13,7 @@ namespace ECommerce.Domain.Repositories
 
         Task<IEnumerable<Product>> GetAllAsync();
 
-        Task AddAsync(Product product);
+        Task<Product> AddAsync(Product product);
 
         Task UpdateAsync(Product product);
     }
