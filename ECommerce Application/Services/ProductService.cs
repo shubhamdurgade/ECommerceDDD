@@ -24,14 +24,16 @@ namespace ECommerce_Application.Services
             return _mapper.Map<ProductDTO>(product);
         }
 
-        public Task<IEnumerable<ProductDTO>> GetAllProductAsync()
+        public async Task<IEnumerable<ProductDTO>> GetAllProductAsync()
         {
-            var pro
+            var products = await _productRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<ProductDTO>>(products);
         }
 
-        public Task<ProductDTO> GetProductByIdAsync(int it)
+        public async Task<ProductDTO> GetProductByIdAsync(int it)
         {
-            throw new NotImplementedException();
+            var product = await _productRepository.GetByIdAsync(it);
+            return _mapper.Map<ProductDTO>(product);
         }
     }
 }
