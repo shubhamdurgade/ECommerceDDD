@@ -29,14 +29,15 @@ namespace ECommerce.Domain.Entities
 
         public ICollection<OrderItem> Items { get; private set; } = new List<OrderItem>();
         
-        private Order() { }
-
-        public Order(int customerId, DateTime orderDate, Address shippingAddress, decimal totalAmount)
+        private Order(int customerId)
         {
-            CustomerId = customerId;
-            OrderDate = orderDate;
-            ShippingAddress = shippingAddress;
-            TotalAmount = totalAmount;
+            CustomerId=customerId;
+        }
+
+        public Order(int customerId, Address shippingAddress)
+        {
+            CustomerId = customerId; 
+            ShippingAddress = shippingAddress; 
         }
 
         public void AddItem(Product product,int quantity)
