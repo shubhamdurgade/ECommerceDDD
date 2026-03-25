@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ECommerce.Domain.Entities;
-namespace ECommerce_Infrastructure.Persistence
+namespace ECommerce.Infrastructure.Persistence
 {
     public class ECommerceDbContext : DbContext
     {

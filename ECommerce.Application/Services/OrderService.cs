@@ -2,10 +2,10 @@
 using ECommerce.Domain.Entities;
 using ECommerce.Domain.Repositories;
 using ECommerce.Domain.Services;
-using ECommerce_Application.DTOs;
-using ECommerce_Infrastructure.Repository;
+using ECommerce.Application.DTOs;
+using ECommerce.Infrastructure.Repository;
 
-namespace ECommerce_Application.Services
+namespace ECommerce.Application.Services
 {
     public class OrderService : IOrderService
     {
@@ -38,7 +38,7 @@ namespace ECommerce_Application.Services
                 throw new Exception("Customer not found");
             }
 
-            // Use AddressDTO directly, as it is already imported via using ECommerce_Application.DTOs;
+            // Use AddressDTO directly, as it is already imported via using ECommerce.Application.DTOs;
             var shippingAddress = new Address(
                 request.ShippingAddress.Street,
                 request.ShippingAddress.City,

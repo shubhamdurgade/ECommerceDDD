@@ -1,9 +1,9 @@
-﻿using ECommerce_Application.DTOs; 
-using ECommerce_Infrastructure;
+﻿using ECommerce.Application.DTOs; 
+using ECommerce.Infrastructure;
 using ECommerce.Domain.Repositories;
 using AutoMapper;
 
-namespace ECommerce_Application.Services
+namespace ECommerce.Application.Services
 {
     public class ProductService : IProductService
     {

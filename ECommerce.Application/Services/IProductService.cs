@@ -1,6 +1,6 @@
-﻿using ECommerce_Application.DTOs;
+﻿using ECommerce.Application.DTOs;
 
-namespace ECommerce_Application.Services
+namespace ECommerce.Application.Services
 {
     public interface IProductService
     {

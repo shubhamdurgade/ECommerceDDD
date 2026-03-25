@@ -5,9 +5,9 @@ VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Domain", "ECommerce.Domain\ECommerce.Domain.csproj", "{F269AAD2-3CDD-4880-AB8F-715166DB955B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Infrastructure", "ECommerce Infrastructure\ECommerce.Infrastructure.csproj", "{86FF8820-5D6C-469D-9464-71FE99BCEEA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Infrastructure", "ECommerce.Infrastructure\ECommerce.Infrastructure.csproj", "{86FF8820-5D6C-469D-9464-71FE99BCEEA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Application", "ECommerce Application\ECommerce.Application.csproj", "{C70F6927-C612-40A9-B37D-A0BB37DFC001}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.Application", "ECommerce.Application\ECommerce.Application.csproj", "{C70F6927-C612-40A9-B37D-A0BB37DFC001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.API", "ECommerce.API\ECommerce.API.csproj", "{5009C13C-BBD6-418D-9BC2-82AE2C025420}"
 EndProject

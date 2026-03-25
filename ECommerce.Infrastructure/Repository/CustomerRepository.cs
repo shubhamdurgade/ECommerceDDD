@@ -1,9 +1,9 @@
 ﻿using ECommerce.Domain.Entities;
 using ECommerce.Domain.Repositories;
-using ECommerce_Infrastructure.Persistence;
+using ECommerce.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce_Infrastructure.Repository
+namespace ECommerce.Infrastructure.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {

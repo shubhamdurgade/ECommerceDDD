@@ -1,11 +1,11 @@
-﻿using ECommerce_Application.DTOs;
+﻿using ECommerce.Application.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECommerce_Application.Services
+namespace ECommerce.Application.Services
 {
     public interface IOrderService
     {

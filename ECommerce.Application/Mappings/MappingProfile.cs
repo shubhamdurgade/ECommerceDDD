@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using ECommerce.Domain.Entities;
-using ECommerce_Application.DTOs;
-using ECommerce_Infrastructure; 
+using ECommerce.Application.DTOs;
+using ECommerce.Infrastructure; 
 
-namespace ECommerce_Application.NewFolder
+namespace ECommerce.Application.MappingProfile
 {
     public class MappingProfile : Profile
     {
