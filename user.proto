@@ -1,0 +1,73 @@
+syntax = "proto3" ;
+option csharp_namespace = "ECommerce.GrpcContracts.Users" ;
+package ecommerce.users;
+
+service UserGrpc{
+	rpc UserExists(UserExistsReqeust) returns (UserExistsReply) ;
+
+	rpc GetUserAddressById (GetUserAddressByIdRequest) returns (GetUserAddressByIdReply) ;
+
+	rpc SaveOrUpdateAddress (SaveOrUpdateAddressRequest) returns (SaveOrUpdateAddressReply) ;
+}
+
+message UserExistsRequest
+{
+	string user_id = 1;
+}
+
+message UserExistsReply{
+	bool exists = 1 ;
+}
+
+message GetUserByIdRequest
+{
+	string user_id = 1 ;
+}
+
+message GetUserByIdReply
+{
+	bool found = 1;
+
+	User user = 2 ;
+}
+
+message User
+{
+	string id = 1 ;
+	string full_name = 2;
+	string email = 3 ;
+	string phone_number = 4 ;
+}
+
+message GetUserAddressByIdRequest{
+	string user_id = 1 ;
+	string address_id = 2 ;
+}
+
+message GetUserAddressByIdReply{
+	bool found = 1 ;
+	Address address = 2;
+}
+
+message SaveOrUpdateAddressRequest
+{
+	Address address = 1 ;
+}
+
+message SaveOrUpdateAddressReply{
+	string address_id = 1 ;
+}
+
+message address{
+	string id = 1 ;
+	string user_id = 2;
+	string address_line1 = 3 ;
+	string address_line2 = 4 ;
+	string city = 5 ;
+	string state = 5;
+	string postal_code = 7;
+	string country = 8 ;
+	bool is_default_billing  = 9;
+	bool is_defalut_shipping = 10;
+}
+
