@@ -1,0 +1,67 @@
+syntax = "proto3" ;
+option csharp_namespace = "ECommerce.GrpcContracts.Products" ;
+
+package ecommerce.products;
+
+service ProductGrpc
+{
+	rpc GetProductByIds(GetProductsByIdsRequest) returns (GetProductsByIdsReply) ;
+	rpc CheckProductsAvailability (CheckProductsAvailabilityRequest) returns (CheckProductsAvailabilityReply) ;
+	rpc IncreaseStockBulk(StockBulkUpdateRequest) returns (StockBulkUpdateReply) ;
+	rpc DecreaseStockBulk(StockBulkUpdateResquest) returns (StockBulkUpdateReply) ;
+}
+
+message GetProductsByIdsRequest{
+	repeated string product_ids = 1 ; // a list product ids to fetch
+}
+
+message GetProductsByIdsReply{
+	repeated Product products = 1 ;
+}
+
+message Product{
+	string id = 1 ;
+	string name  = 2 ;
+	string price = 3 ;
+	string discount_price = 4;
+	int32 stock_quantity = 5;
+}
+
+message StockCheckItem
+{
+	string product_id = 1 ;
+	int32 quantity = 2 ;
+}
+
+message StockCheckResult
+{
+	string product id = 1;
+	bool is_valid_product = 2;
+	bool is_quantity_available = 3 ;
+	int32 available_quantity = 4
+}
+
+message CheckProductsAvailabilityRequest
+{
+	repeated StockCheckItem itmes = 1 ;
+}
+
+messgae CheckPrudctAvailabilityRequest
+{
+	repeated StockCheckItem items = 1 ;
+}
+
+messgae CheckPrudctAvailabilityReply
+{
+	repeated StockCheckItem items = 1 ;
+}
+
+message StockBulkUpdateRequest
+{
+	repeated StockUpdate updates = 1 ;
+}
+
+messgae StockBulkUpdateReply{
+	bool success = 1 ;
+	string messgae = 2
+}

@@ -64,7 +64,7 @@ message address{
 	string address_line1 = 3 ;
 	string address_line2 = 4 ;
 	string city = 5 ;
-	string state = 5;
+	string state = 6;
 	string postal_code = 7;
 	string country = 8 ;
 	bool is_default_billing  = 9;

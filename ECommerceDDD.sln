@@ -17,6 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECommerce.GrpcContracts", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Protos", "Protos", "{0E5E4CBB-BF02-4492-A84F-8E15B930BC0B}"
 	ProjectSection(SolutionItems) = preProject
+		product.proto = product.proto
 		user.proto = user.proto
 	EndProjectSection
 EndProject
