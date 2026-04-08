@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Protobuf Include="Protos\user.proto" GrpcServices="None" />
+    <Protobuf Include="Protos\product.proto" GrpcServices="None" />
+  </ItemGroup>
+
 </Project>
